@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import RegisterComponent from './component/register';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+function Header({name, age}){
+  return(
+    <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -15,10 +15,19 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Nama : {name}
+          Umur : {age}
         </a>
       </header>
-    </div>
+  );
+}
+
+function App() {
+  return (
+    // <div className="App">
+    //   <Header name="Reza Tri" age ="17"/>
+    // </div>
+    <RegisterComponent />
   );
 }
 
